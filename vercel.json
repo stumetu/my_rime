@@ -1,5 +1,9 @@
 declare -a packages=(
-  ... # targets output by pnpm run schema
+  pnpm run native
+  pnpm run schema
+  export ENABLE_LOGGING=ON # optional
+  pnpm run lib
+  pnpm run wasm
 )
 for package in "${packages[@]}"; do
   pushd public/ime/$package
