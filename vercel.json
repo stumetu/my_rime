@@ -1,16 +1,3 @@
-declare -a packages=(
-  pnpm run native
-  pnpm run schema
-  export ENABLE_LOGGING=ON # optional
-  pnpm run lib
-  pnpm run wasm
-)
-for package in "${packages[@]}"; do
-  pushd public/ime/$package
-  npm publish
-  popd
-done
-
 export LIBRESERVICE_CDN=https://cdn.jsdelivr.net/npm/@libreservice/my-rime@VERSION/dist/
 export RIME_CDN=https://cdn.jsdelivr.net/npm/@rime-contrib/
 
