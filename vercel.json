@@ -1,4 +1,3 @@
-# publish IMEs
 declare -a packages=(
   ... # targets output by pnpm run schema
 )
@@ -8,7 +7,6 @@ for package in "${packages[@]}"; do
   popd
 done
 
-# set VERSION to avoid CDN and browser caching old version
 export LIBRESERVICE_CDN=https://cdn.jsdelivr.net/npm/@libreservice/my-rime@VERSION/dist/
 export RIME_CDN=https://cdn.jsdelivr.net/npm/@rime-contrib/
 
